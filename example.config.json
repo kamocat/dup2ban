@@ -1,0 +1,19 @@
+{
+  "_comment": "Global defaults applied to every guild unless overridden in 'guilds'.",
+  "default": {
+    "detection_window_seconds": 30,
+    "min_channels": 2,
+    "punishment": "timeout",
+    "timeout_duration_minutes": 60,
+    "exempt_admins": true
+  },
+  "guilds": {
+    "REPLACE_WITH_GUILD_ID": {
+      "detection_window_seconds": 15,
+      "min_channels": 2,
+      "punishment": "ban",
+      "timeout_duration_minutes": 60,
+      "exempt_admins": true
+    }
+  }
+}
