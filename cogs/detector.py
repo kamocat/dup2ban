@@ -138,8 +138,11 @@ class DuplicateDetector(commands.Cog):
 
         if not (exempt and is_admin):
             await self._punish(guild, author, cfg)
+            print(f"[cross2ban] Punishing {author.name} ({author.id}) with {cfg.get('punishment', 'none')}")
 
         # -- 2. Delete all copies --
+        print(f"[cross2ban] Deleting {len(messages_to_delete)} messages")
+        print(f"[cross2ban] Content: {triggering_message.content}")
         delete_tasks = [self._safe_delete(m) for m in messages_to_delete]
         await asyncio.gather(*delete_tasks)
 
